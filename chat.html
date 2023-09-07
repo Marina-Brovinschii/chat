@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <style>
+        body {
+            background-color: #4682B4;
+        }
+        .chat-window {
+            width: 400px;
+            background-color: white;
+            border-radius: 20px;
+        }
+        .chat-window header {
+            height: 60px;
+            background-color: bisque;
+            border-radius: 20px 20px 0 0;
+        }
+        .chat-window section {
+            height: 500px;
+        }
+        .chat-window footer {
+            height: 60px;
+            padding: 5px 0 0 10px;
+            background-color: bisque;
+            border-radius: 0 0 20px 20px;
+        }
+        .chat-top {
+            display: flex;
+        }
+        .arrow {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: darkmagenta;
+            font-size: 30px;
+            border: none;
+            margin-left: 10px;
+            background-color: bisque;
+        }
+        .imagine-girl {
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 50px;
+            margin: 5px 0 0 10px;
+        }
+        .chat-online {
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 5px 0 0 10px;
+        }
+        .online {
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            line-height: 1px;
+        }
+        .imagine-phone {
+            margin-left: 60px;
+            border: none;
+            background-color: white;
+            background-color: bisque;
+        }
+        .imagine-video {
+            margin-left: 20px;
+            border: none;
+            background-color: white;
+            background-color: bisque;
+        }
+        .imagine-info {
+            margin-left: 20px;
+            border: none;
+            background-color: white;
+            background-color: bisque;
+        }
+        .message-list {
+           list-style: none; 
+           margin: 0;
+           padding: 0;
+        }
+        .message-list li {
+            height: 50px;
+        }
+        .message-list p {
+            display: inline-block;
+            vertical-align: top;
+            border-radius: 20px 20px 20px 0;
+            padding: 10px;
+        }
+        .chat-window .message-you {
+            text-align: left;
+        }
+        .chat-window .message-you p {
+            background-color:darkgray;
+            border-radius: 20px 20px 20px 0;
+        }
+        .chat-window .message-me {
+            text-align: right;
+            margin-right: 10px;
+        }
+        .chat-window .message-me p {
+            background-color:darkmagenta;
+            border-radius: 20px 20px 0 20px;
+        }
+
+        .tipar span:nth-child(1) {
+            opacity: 0;
+            animation: appear 1s infinite;
+        }
+        .tipar span:nth-child(2) {
+            opacity: 0;
+            animation: appear 1s infinite 0.3s;
+        }
+        .tipar span:nth-child(3) {
+            opacity: 0;
+            animation: appear 1s infinite 0.6s;
+        }
+
+        @keyframes appear {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        footer button {
+            border: none;
+            background-color: bisque;
+            margin-top: 10px;
+            vertical-align: top;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="chat-window">
+        <header class="chat-top">
+            <button class="arrow">←</button>
+            <button class="imagine-girl"><img src="browser-girl-chrome-icon.png" alt=""></button>
+            <div class="chat-online"><p class="online">Oxana</p><p style="font-size: 10px;">online</p></div>
+            <button class="imagine-phone"><img src="phone-icon.png" alt=""></button>
+            <button class="imagine-video"><img src="Mobile-Video-Call-icon.png" alt=""></button>
+            <button class="imagine-info"><img src="General-Get-Info-icon.png" alt=""></button>
+        </header>
+        <section>
+            <ul class="message-list">
+                <li class="message-you">
+                    <img class="imagine-girl" src="browser-girl-chrome-icon.png" alt="">
+                    <p>Salut!</p> 
+                </li>
+                <li class="message-me">
+                    <p>Salut!</p>
+                </li>
+                <li class="message-you">
+                    <img class="imagine-girl" src="browser-girl-chrome-icon.png" alt="">
+                    <p>Am o propunere</p>
+                </li>
+                <li class="message-me">
+                    <p>Ascult cu mare atentie)</p>
+                </li>
+                <li class="message-you">
+                    <img class="imagine-girl" src="browser-girl-chrome-icon.png" alt="">
+                    <p>Duminica voi fi in sat, propun sa ne vedem</p>
+                </li>
+                <li class="message-me">
+                    <p>Buna idee</p>
+                </li>
+                <li class="message-you">
+                    <img class="imagine-girl" src="browser-girl-chrome-icon.png" alt="">
+                    <p>Deseara revin cu un sunet si discutam!</p>
+                </li>
+                <li class="message-me">
+                    <p>Ok, ma eliberez la 19.00</p>
+                </li>
+                <li class="message-you">
+                    <img class="imagine-girl" src="browser-girl-chrome-icon.png" alt="">
+                    <p class="tipar">
+                        <span>•</span>
+                        <span>•</span>
+                        <span>•</span>
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <button>
+                <img src="Camera-icon.png" alt="">
+            </button>
+            <button>
+                <img src="Photo-icon.png" alt="">
+            </button>
+            <button>
+                <img src="FontAwesome-Microphone-icon.png" alt="">
+            </button>
+            <label>
+                <input type="text">
+            </label>
+            <button>
+                <img src="Heart-icon.png" alt="">
+            </button>
+        </footer>
+    </div>
+</body>
+</html>
